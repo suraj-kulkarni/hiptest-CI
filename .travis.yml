@@ -1,2 +1,8 @@
 language: java
-script: "./scripts/travis"
+
+sudo: false
+
+gem install hiptest-publisher
+hiptest-publisher -c publisher.config
+
+mvn package
